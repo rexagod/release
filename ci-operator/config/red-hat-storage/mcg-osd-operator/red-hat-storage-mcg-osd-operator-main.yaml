@@ -18,15 +18,11 @@ tag_specification:
   name: "4.9"
   namespace: ocp
 tests:
-- as: unit-test
-  commands: go test ./... -v -tags unit -mod=readonly -coverprofile unit-cover.out
-  container:
-    from: src
-- as: integration-test
+- as: test-suite
   steps:
     cluster_profile: aws
     test:
-    - as: integration-test-aws
+    - as: test-suite-aws
       commands: USE_EXISTING_CLUSTER=true make test
       from: src
       resources:

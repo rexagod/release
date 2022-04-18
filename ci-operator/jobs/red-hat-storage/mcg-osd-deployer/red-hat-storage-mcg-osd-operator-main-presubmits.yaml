@@ -1,5 +1,5 @@
 presubmits:
-  red-hat-storage/mcg-osd-operator:
+  red-hat-storage/mcg-osd-deployer:
   - agent: kubernetes
     always_run: true
     branches:
@@ -15,7 +15,7 @@ presubmits:
       ci-operator.openshift.io/cloud-cluster-profile: aws
       ci.openshift.io/generator: prowgen
       pj-rehearse.openshift.io/can-be-rehearsed: "true"
-    name: pull-ci-red-hat-storage-mcg-osd-operator-main-test-suite
+    name: pull-ci-red-hat-storage-mcg-osd-deployer-main-test-suite
     rerun_command: /test test-suite
     spec:
       containers:

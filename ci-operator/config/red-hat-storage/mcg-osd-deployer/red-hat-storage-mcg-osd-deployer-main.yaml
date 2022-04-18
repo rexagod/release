@@ -32,4 +32,4 @@ tests:
 zz_generated_metadata:
   branch: main
   org: red-hat-storage
-  repo: mcg-osd-operator
+  repo: mcg-osd-deployer
